@@ -10,7 +10,7 @@ Install Node.js and then:
 
 ```sh
 $ git clone https://github.com/kingjulian24/MMC4.git
-$ cd MMC$
+$ cd MMC4
 $ npm install
 $ bower install
 $ grunt serve
