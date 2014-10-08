@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>mmc4</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="container" >
+
+        <div class="row logo">
+     
+          <div class="col-xs-12 ">
+            <form  role="form"class="form-search" >
+                <div class="input-group">
+                  <span class="input-group-addon">MMC</span>
+                  <input type="text" class="input-medium search-query form-control" id="searchformhome" name="search" >
+              </div>
+            </form>
+          </div>
+        </div>
+        <br>
+        <div class="row" id="container">
+          <script id="movie_template" type="text/javascript">
+          <div class="row">
+          
+          <div class="col-xs-12 col-sm-4 poster">
+            <img class="img-responsive movie-poster" src="{{Poster}}" >
+          </div>
+          
+          <div class="col-xs-12 col-sm-8 movie-title">
+            <h1>
+              {{Title}}
+            </h1>
+                <span class="year">
+                  &nbsp;(<a href="http://www.imdb.com/year/{{year}}/?ref_=tt_ov_inf">{{Year}}</a>)
+                </span>
+          </div>
+          <div class="col-xs-12 col-sm-8 movie-title">
+           <p>{{rated}} | {{Runtime}} | {{Genre}} | {{Released}}</p>
+            <hr/>
+            <p>{{imdbRating}}&nbsp;out of 10</p>
+            <hr/>
+            <p>
+              {{Plot}}
+            </p>
+            <p>
+              <strong>Director: </strong>{{Director}}<br>
+              <strong>Writers: </strong>{{Writer}}<br>
+              <strong>Stars: </strong>{{Actors}}<br>
+            </p>
+            <!-- Button trigger modal -->
+                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal" disabled="disabled">
+                  Watch Trailer
+                </button> 
+                <a href="http://www.imdb.com/title/{{imdbID}}/">
+                <button class="btn btn-primary">
+                  View on IMDB
+                </button> 
+                </a>   
+          </div>
+        </div>
+</div>
+</script>
+
+        <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">{{Title}}</h4>
+            </div>
+            <div class="modal-body">
+             <div class="flex-video widescreen">
+              {{trailer}}
+             </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
